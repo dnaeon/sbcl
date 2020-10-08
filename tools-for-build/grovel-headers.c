@@ -39,7 +39,7 @@
   #include <sys/times.h>
   #include <sys/wait.h>
   #include <sys/ioctl.h>
-#if defined __HAIKU__ || defined __DragonFly__ || defined LISP_FEATURE_ANDROID
+#if defined __HAIKU__ || defined __DragonFly__ || defined LISP_FEATURE_ANDROID || defined LISP_FEATURE_LINUX
   #include <termios.h>
 #else
   #include <sys/termios.h>
