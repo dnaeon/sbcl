@@ -100,11 +100,7 @@ void closefrom_fallback(int lowfd)
 {
     int fd, maxfd;
 
-#ifdef SVR4
     maxfd = sysconf(_SC_OPEN_MAX)-1;
-#else
-    maxfd = getdtablesize()-1;
-#endif
 
     for (fd = maxfd; fd >= lowfd; fd--)
         close(fd);
