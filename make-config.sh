@@ -490,7 +490,7 @@ case "$sbcl_os" in
     linux)
         printf ' :unix :linux :elf' >> $ltf
         case "$sbcl_arch" in
-          arm64 | ppc64 | x86 | x86-64)
+          ppc64 | x86 | x86-64)
 	        printf ' :gcc-tls' >> $ltf
         esac
         case "$sbcl_arch" in
